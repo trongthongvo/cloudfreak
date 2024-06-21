@@ -7,6 +7,8 @@ pipeline {
     stages {      
         stage('Build maven ') {
             steps { 
+                    sh 'export JAVA_HOME=/usr/bin/java'
+                    sh 'echo $JAVA_HOME'
                     sh 'pwd'      
                     sh 'mvn  clean install package'
             }
